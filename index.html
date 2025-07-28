@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>متجر الشيخ أكرم للطواقم</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Cairo', sans-serif;
+      direction: rtl;
+      text-align: center;
+      background-size: cover;
+      background-position: center;
+      transition: background-image 1s ease-in-out;
+    }
+
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 60px 20px;
+      min-height: 100vh;
+      color: white;
+    }
+
+    h1 {
+      font-size: 32px;
+    }
+
+    p {
+      font-size: 20px;
+    }
+
+    button {
+      padding: 12px 30px;
+      font-size: 18px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      background-color: #ffd700;
+      color: black;
+      margin-top: 20px;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body id="body">
+
+  <div class="overlay" id="screen1">
+    <h1>متجر الشيخ أكرم للطواقم</h1>
+    <p>عرض خاص 🔥 الطاقم الوحيد الذي تجد فيه السلام!</p>
+    <button onclick="showProducts()">عرض المنتجات</button>
+  </div>
+
+  <div class="overlay hidden" id="screen2">
+    <h1>منتجاتنا</h1>
+    <img src="https://i.postimg.cc/Wzp22x5X/988d90db8a5236e29575e4c67531c7a9.jpg" alt="المنتج" width="300" style="border-radius: 12px;"><br><br>
+    <p>طقم صلاة فاخر + مسبحة</p>
+    <p>السعر: 2500 دج</p>
+    <button onclick="goToFacebook()">طلب الآن عبر فيسبوك</button>
+  </div>
+
+  <script>
+    const body = document.getElementById("body");
+    const screen1 = document.getElementById("screen1");
+    const screen2 = document.getElementById("screen2");
+
+    function showProducts() {
+      body.style.backgroundImage = "url('https://i.postimg.cc/nVTFdcL5/6ba8dc20b1a799d3bba26abbcfe1173e.jpg')";
+      screen1.classList.add("hidden");
+      screen2.classList.remove("hidden");
+    }
+
+    function goToFacebook() {
+      window.location.href = "https://ar-ar.facebook.com/profile.php?id=61578861930846";
+    }
+
+    // الخلفية الأولى
+    window.onload = () => {
+      body.style.backgroundImage = "url('https://i.postimg.cc/RVRMDCVy/b111f4f780a10a67c9d41b7a5e3a09f4.jpg')";
+    }
+  </script>
+</body>
+  </html>
