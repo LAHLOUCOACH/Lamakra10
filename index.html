@@ -4,6 +4,72 @@
   <meta charset="UTF-8">
   <title>متجر الشيخ أكرم للطواقم</title>
   <style>
+    .box {
+  background-color: #fff;
+  width: 90%;
+  max-width: 800px;
+  margin: 5vh auto;
+  padding: 5vw;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: 1s ease;
+}
+
+.box img {
+  width: 40vw;
+  max-width: 200px;
+  margin: 4vw;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all 1s ease;
+}
+
+.box.show img {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.price {
+  font-size: 4vw;
+  color: #333;
+  margin: 2vh 0;
+}
+
+a.order-btn {
+  display: inline-block;
+  margin-top: 3vh;
+  padding: 2vh 4vw;
+  background-color: #28a745;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  font-size: 4vw;
+  transition: background 0.3s;
+}
+
+a.order-btn:hover {
+  background-color: #218838;
+}
+
+@media (max-width: 500px) {
+  header h1 {
+    font-size: 6vw;
+  }
+
+  .price {
+    font-size: 5vw;
+  }
+
+  a.order-btn {
+    font-size: 5vw;
+    padding: 3vh 5vw;
+  }
+
+  .box img {
+    width: 60vw;
+  }
+    }
     body {
       margin: 0;
       font-family: 'Cairo', sans-serif;
